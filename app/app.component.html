@@ -1,0 +1,62 @@
+<!-- <app-acordo-extra-plus></app-acordo-extra-plus>
+
+<app-exemplos-pipes></app-exemplos-pipes> -->
+<!-- <app-example-rotas></app-example-rotas> -->
+<form class="form-inline">
+    <div class="form-group">
+        <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd" name="d2" #c2="ngModel" [(ngModel)]="acordo.dataInicio" ngbDatepicker
+                #d2="ngbDatepicker">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" (click)="d2.toggle()" type="button">
+                    <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd" name="d3" #c3="ngModel" [(ngModel)]="acordo.dataFim" ngbDatepicker #d3="ngbDatepicker">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" (click)="d3.toggle()" type="button">
+                    <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+Faixa 1
+<input type="number" [(ngModel)]="acordo.faixa1"> Faixa Total {{acordo.faixa1Total}}
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID GRUPO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let revenda of revendas">
+
+            <td>{{revenda.nomeGrupo}}
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID REVENDA</th>
+                        </tr>
+                    </thead>
+                    <tr *ngFor="let revenda of revendas">
+                        <td>{{revenda.idRevenda}}</td>
+                    </tr>
+
+                </table>
+            </td>
+
+        </tr>
+
+    </tbody>
+</table>

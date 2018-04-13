@@ -1,0 +1,39 @@
+<div class="collection">
+  <a href="#!" class="collection-item" *ngFor="let curso of cursos" 
+   [routerLink]="['/curso', curso.id]">
+    {{curso.nome}}
+  </a> 
+</div>
+
+Página {{pagina}}
+
+<button (click)="proximaPagina()">Próxima página</button>
+
+
+<form class="form-inline">
+  <!-- <div class="form-group">
+    <div class="input-group">
+      <input class="form-control" placeholder="yyyy-mm-dd"
+             name="d2" #c2="ngModel" [(ngModel)]="acordo.dataInicio" ngbDatepicker #d2="ngbDatepicker">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" (click)="d2.toggle()" type="button">
+          <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <input class="form-control" placeholder="yyyy-mm-dd"
+             name="d3" #c3="ngModel" [(ngModel)]="acordo.dataFim" ngbDatepicker #d3="ngbDatepicker">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" (click)="d3.toggle()" type="button">
+          <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+        </button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- {{acordo.dataInicio}} -->
+</form>

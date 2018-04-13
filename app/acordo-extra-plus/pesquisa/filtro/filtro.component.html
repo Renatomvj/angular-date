@@ -1,0 +1,17 @@
+<form>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Codigo">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Nome">
+    </div>
+   
+  </div>
+  <div class="col">
+      <button class="form-control"> Pesquisar </button>
+  </div>
+</form>
+
+<input type="text" class="form-control" placeholder="Nome acordo" #nomeCurso />
+<button class="form-control" (click)="onAddCurso(nomeCurso.value)"> Add Curso </button>
