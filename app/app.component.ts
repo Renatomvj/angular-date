@@ -12,15 +12,48 @@ export class AppComponent {
   acordo: Acordo;
   title = 'app';
 
+  page: any;
   revendas:  Revenda[];
+  revendasPaginacao:  Revenda[];
+  previousPage: any;
+  qtaPorPagina: any;
+  
   constructor()
   {
+    this.qtaPorPagina =1;
     this.acordo = new Acordo();
   
     this.getRevendas();
+    this.revendas.length;
+    this.page = 0;
 
+    this.revendasPaginacao = this.revendas.slice(0, this.qtaPorPagina);
+    
   }
+  loadPage(page: number) {
+    // if (page !== this.previousPage) {
+    //   this.previousPage = page;
+      this.loadData();
+   // }
+  } 
 
+  loadData() {
+    // this.dataService.query({
+    //   page: this.page - 1,
+    //   size: this.itemsPerPage,
+    // }).subscribe(
+    //   (res: Response) => this.onSuccess(res.json(), res.headers),
+    //   (res: Response) => this.onError(res.json())
+    //   )
+    console.log(this.page);
+    console.log(this.qtaPorPagina);
+    this.revendasPaginacao = this.revendas.slice(this.page-1, this.qtaPorPagina * this.page);
+    console.log(this.revendasPaginacao);
+
+    // console.log(this.revendas);
+    // var a = this.revendas.slice(0,1);
+    // console.log(this.revendas);
+  }
   getRevendas()
   {
     this.revendas = new Array<Revenda>();

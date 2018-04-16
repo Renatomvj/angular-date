@@ -31,8 +31,28 @@ Faixa 1
 
 
 
-
 <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">GRUPO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let revenda of revendasPaginacao">
+
+            <td>{{revenda.nomeGrupo}}
+            
+            </td>
+
+        </tr>
+
+    </tbody>
+</table>
+<ngb-pagination [collectionSize]="revendas.length" [pageSize]="qtaPorPagina" [(page)]="page" [maxSize]="1" [rotate]="true" (pageChange)="loadPage($event)" ></ngb-pagination>
+
+
+
+<!-- <table class="table">
     <thead>
         <tr>
             <th scope="col">ID GRUPO</th>
@@ -59,4 +79,4 @@ Faixa 1
         </tr>
 
     </tbody>
-</table>
+</table> -->
